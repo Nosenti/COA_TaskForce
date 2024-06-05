@@ -1,35 +1,98 @@
 :root {
-	--color-primary: #0bdbb6;
-	--color-primary-light: #f9fffe;
-  
-	--color-grey-light-1: #faf9f9;
-	--color-grey-light-2: #f4f2f2;
-	--color-grey-light-3: #f0eeee;
-	--color-grey-light-4: #ccc;
-  
-	--color-grey-dark-1: #333;
-	--color-grey-dark-2: #777;
-	--color-grey-dark-3: #999;
-  
-	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  }
-  
-  * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-  }
-  body {
-	font-family: "Poppins", sans-serif;
-	/* 1rem = 10px; */
-	font-size: 62.5%;
-	line-height: 1.7;
-	font-weight: 400;
-  }
+    --color-white: #FFFFFF;
+    --overlay-color: rgba(0, 0, 0, 0.7);
+}
 
-  .body-container {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	position: relative;
-  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;  /* 10px = 1rem assuming browser default font size is 16px */
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.image-item {
+    width: 290px;
+    height: 587px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8) 20%, 50%);
+    z-index: 2;
+    transition: background 0.5s ease;
+}
+
+.info h2, .info p {
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+    opacity: 0;
+}
+
+.know-more {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.know-more:hover {
+    background-color: var(--color-white);
+    color: black;
+}
+
+.image-item:hover .overlay {
+    background-color: var(--overlay-color);
+    opacity: 1;
+}
+
+.image-item:hover {
+    filter: grayscale(100%);
+    transform: scale(1.05);
+}
