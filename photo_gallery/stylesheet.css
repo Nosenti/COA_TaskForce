@@ -49,26 +49,29 @@ body {
 
 .info {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: 0;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 30px;
     transition: transform 0.5s ease;
 }
 
 .info h2 {
-	font-size: 3.8rem;
+	font-size: 2rem;
 	font-weight: 700;
-	line-height: 3.8rem;
+	line-height: 2rem;
 	text-transform: uppercase;
 	font-family: 'Inter', sans-serif;
+	margin-bottom: 5px;
+	
 }
 .info p{
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 1.6rem;
 	font-weight: 400;
 	opacity: .7;
 	font-family: 'Poppins', sans-serif;
+	padding-top: 7px;
 }
 
 .info h2, .info p {
@@ -81,7 +84,7 @@ body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px;
+	padding: 30px;
 	background-image: linear-gradient(to top, var(--overlay-color) 0%, transparent 100%);
 	z-index: 1;
 	transition: opacity 0.5s ease;
@@ -98,22 +101,27 @@ body {
     transition: opacity 0.5s ease;
     opacity: 0;
 	font-weight: 400;
-    margin-top: 5px;
+    
 }
 
 .image-item:hover img {
-    filter: blur(4px);
-    transform: scale(1.1);
+	filter: blur(.5rem) grayscale(100%);
+	transform: scale(1.1);
+	-webkit-filter: blur(.5rem) grayscale(100%);
 }
 
 .image-item:hover .info h2, .image-item:hover .info p {
-    transform: translateY(-20px); /* Moves the text up */
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
 }
 
 .image-item:hover .overlay {
-    opacity: 1; /* Shows the overlay for better readability */
+    opacity: 1;
 }
 
 .image-item:hover .know-more {
-    opacity: 1; /* Makes the 'Know more' link visible */
+    opacity: 1; 
 }
