@@ -4,6 +4,7 @@
  * it reverses the string and then replaces each character with its ASCII code. 
  * If divisible by 3 only, it reverses the string. 
  * If divisible by 5 only, it replaces each character with its ASCII code.
+ * Time: O(n) and Space: O(n)
  * 
  * @param {string} str - The string to transform
  * @returns {string} - The transformed string

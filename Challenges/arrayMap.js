@@ -1,6 +1,7 @@
 
 /**
  * Checks if there is a contiguous subarray within the given array that sums up to the target value
+ * Time: O(n) and Space: O(1)
  * 
  * @param {number[]} arr - The array of integers to check
  * @param {number} target - The target sum to find within the array
