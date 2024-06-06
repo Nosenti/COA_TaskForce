@@ -125,3 +125,16 @@ body {
 .image-item:hover .know-more {
     opacity: 1; 
 }
+
+/*Tablet Landscape: from 600 to 900px*/
+@media only screen and (max-width: 900px){
+    .info, .overlay {
+        display: none;
+    }
+}
+/*Mobile Landscape: from 0 to 600px*/
+@media only screen and (max-width: 600px){
+    .info, .overlay {
+        display: none;
+    }
+}
